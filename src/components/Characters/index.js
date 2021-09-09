@@ -1,11 +1,15 @@
+import CharCard from "../CharCard";
+import "./style.css";
 const Characters = ({ characterList }) => {
   return (
-    <>
+    <div>
       <h1>Meus personagens</h1>
-      {characterList.map((student) => (
-        <div key={student.id}>Nome: {student.name} -</div>
-      ))}
-    </>
+      <div className="container">
+        {characterList.map((student) => (
+          <CharCard key={student.id} student={student} />
+        ))}
+      </div>
+    </div>
   );
 };
 
